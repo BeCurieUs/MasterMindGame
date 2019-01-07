@@ -31,11 +31,26 @@ class App extends Component {
     else if (colorValue===1){
       return "red-dot dot"
     }
+    else if (colorValue===2){
+      return "blue-dot dot"
+    }
+    else if (colorValue===3){
+      return "green-dot dot"
+    }
+    else if (colorValue===4){
+      return "orange-dot dot"
+    }
+    else if (colorValue===5){
+      return "yellow-dot dot"
+    }
+    else if (colorValue===6){
+      return "brown-dot dot"
+    }
   }
 
   asignColor = (outerArrayIndex, innerArrayIndex) => {
     const tempArray = this.state.board.concat();
-    tempArray[outerArrayIndex][innerArrayIndex] = 1;
+    tempArray[outerArrayIndex][innerArrayIndex] = this.state.selected;
     this.setState({board:tempArray})
   }
 
